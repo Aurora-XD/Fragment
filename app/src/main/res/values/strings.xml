@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Fragment</string>
+    <string name="app_name">切换Fragment</string>
+    <string name="text_button_android">Android</string>
+    <string name="text_button_java">Java</string>
 </resources>
