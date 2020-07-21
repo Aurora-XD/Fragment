@@ -19,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/text_button_android"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:onClick="setAndroid"/>
 
         <Button
             android:id="@+id/button_java"
@@ -27,7 +28,8 @@
             android:layout_height="wrap_content"
             android:text="@string/text_button_java"
             android:textAllCaps="false"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:onClick="setJava"/>
 
     </LinearLayout>
 
