@@ -7,6 +7,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager;
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         fragmentManager = getSupportFragmentManager();
 
@@ -28,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    public void setAndroid(View view) {
+    @OnClick(R.id.button_android) void setAndroid(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container,androidFragment);
         fragmentTransaction.commit();
     }
 
-    public void setJava(View view) {
+    @OnClick(R.id.button_java) void setJava(View view) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container,javaFragment);
         fragmentTransaction.commit();
